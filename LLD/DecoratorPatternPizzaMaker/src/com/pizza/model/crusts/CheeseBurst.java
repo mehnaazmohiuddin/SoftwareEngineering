@@ -6,6 +6,8 @@ public class CheeseBurst implements Crust {
     PizzaSize size;
     final int crustCostPerInch = 12;
 
+    public  CheeseBurst (){
+    }
     public  CheeseBurst (PizzaSize size){
         this.size = size;
     }
