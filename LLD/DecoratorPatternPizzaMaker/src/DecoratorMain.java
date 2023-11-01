@@ -21,10 +21,7 @@ public class DecoratorMain {
         System.out.println("Hello world!");
         System.out.println("Pizz is ready !!!"+ customPizza);
         System.out.println("Pizz is cost is "+customPizza.getCost());
-
         VeggieDelight vd = new VeggieDelight(  new CheeseBurst(PizzaSize.LARGE), addOns, PizzaSize.LARGE);
         System.out.println("VD cost is "+vd.getCost());
-
-
     }
 }
