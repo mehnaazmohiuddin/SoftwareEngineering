@@ -54,10 +54,32 @@ a.add1();
 
 }
 
-we can also accuquire the same lock again and again.
+we can also accquire the same lock again and again.
 
 
+
+
+We can even make hashmaps synchronized. by using the Collections.synchronizedMap(map); 
+
+This will make the map thread safe. 
 
 Thread Safe Collections ?
 
 ![this was showing the image for thread sharing resource](https://www.baeldung.com/wp-content/uploads/sites/4/2022/11/Shared-resources-in-a-process-1024x462.png)
+**ConcurrentHashMap** is that it provides fine-grained locking, meaning that it locks only the portion of the map being modified, rather than the entire map. 
+
+ConcurrentHashMap  no null allowed. 
+
+
+15 Parallel Streams
+```
+ List<Integer> listOfNumbers = Arrays.asList(1, 2, 3, 4); 
+ listOfNumbers.parallelStream().forEach(number ->
+System.out.println(number + " " + Thread.currentThread().getName())
+);
+```
+
+
+14) Fork/Join Framework: 
+ITs a framework build on top of Executor Service. Which basically steals the work of the
+slow thread from the queue. Each thread has a double ended queue. 
